@@ -56,6 +56,19 @@ function InvalidValue(message) {
 util.inherits(InvalidValue, FaunaError)
 
 /**
+ * Exception thrown by HttpClient when a request hits the specified timeout
+ *
+ * @extends module:errors~FaunaError
+ * @constructor
+ * @param {?string} message Timeout message.
+ */
+function TimeoutError(message) {
+  FaunaError.call(this, 'TimeoutError', message)
+}
+
+util.inherits(TimeoutError, FaunaError)
+
+/**
  * Exception thrown by this client library when an invalid
  * value is provided as a function argument.
  *
@@ -320,4 +333,5 @@ module.exports = {
   StreamError: StreamError,
   StreamsNotSupported: StreamsNotSupported,
   StreamErrorEvent: StreamErrorEvent,
+  TimeoutError: TimeoutError,
 }
