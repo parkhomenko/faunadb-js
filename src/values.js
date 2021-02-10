@@ -7,7 +7,8 @@ var Expr = require('./Expr')
 var util = require('./_util')
 var nodeUtil = util.isNodeEnv() ? require('util') : null
 
-var customInspect = nodeUtil && nodeUtil.inspect.custom
+// var customInspect = nodeUtil && nodeUtil.inspect.custom
+var customInspect = false
 var stringify = nodeUtil ? nodeUtil.inspect : JSON.stringify
 
 /**
