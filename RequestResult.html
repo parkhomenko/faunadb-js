@@ -40,7 +40,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Client.html">Client</a></li><li><a href="Expr.html">Expr</a></li><li><a href="module-errors-BadRequest.html">errors~BadRequest</a></li><li><a href="module-errors-FaunaError.html">errors~FaunaError</a></li><li><a href="module-errors-FaunaHTTPError.html">errors~FaunaHTTPError</a></li><li><a href="module-errors-InternalError.html">errors~InternalError</a></li><li><a href="module-errors-InvalidArity.html">errors~InvalidArity</a></li><li><a href="module-errors-InvalidValue.html">errors~InvalidValue</a></li><li><a href="module-errors-MethodNotAllowed.html">errors~MethodNotAllowed</a></li><li><a href="module-errors-NotFound.html">errors~NotFound</a></li><li><a href="module-errors-PermissionDenied.html">errors~PermissionDenied</a></li><li><a href="module-errors-StreamError.html">errors~StreamError</a></li><li><a href="module-errors-StreamErrorEvent.html">errors~StreamErrorEvent</a></li><li><a href="module-errors-StreamsNotSupported.html">errors~StreamsNotSupported</a></li><li><a href="module-errors-Unauthorized.html">errors~Unauthorized</a></li><li><a href="module-errors-UnavailableError.html">errors~UnavailableError</a></li><li><a href="module-stream-Subscription.html">stream~Subscription</a></li><li><a href="module-values-Bytes.html">values~Bytes</a></li><li><a href="module-values-FaunaDate.html">values~FaunaDate</a></li><li><a href="module-values-FaunaTime.html">values~FaunaTime</a></li><li><a href="module-values-Query.html">values~Query</a></li><li><a href="module-values-Ref.html">values~Ref</a></li><li><a href="module-values-SetRef.html">values~SetRef</a></li><li><a href="module-values-Value.html">values~Value</a></li><li><a href="PageHelper.html">PageHelper</a></li><li><a href="RequestResult.html">RequestResult</a></li>
+					<li><a href="Client.html">Client</a></li><li><a href="Expr.html">Expr</a></li><li><a href="module-errors-BadRequest.html">errors~BadRequest</a></li><li><a href="module-errors-FaunaError.html">errors~FaunaError</a></li><li><a href="module-errors-FaunaHTTPError.html">errors~FaunaHTTPError</a></li><li><a href="module-errors-InternalError.html">errors~InternalError</a></li><li><a href="module-errors-InvalidArity.html">errors~InvalidArity</a></li><li><a href="module-errors-InvalidValue.html">errors~InvalidValue</a></li><li><a href="module-errors-MethodNotAllowed.html">errors~MethodNotAllowed</a></li><li><a href="module-errors-NotFound.html">errors~NotFound</a></li><li><a href="module-errors-PermissionDenied.html">errors~PermissionDenied</a></li><li><a href="module-errors-StreamError.html">errors~StreamError</a></li><li><a href="module-errors-StreamErrorEvent.html">errors~StreamErrorEvent</a></li><li><a href="module-errors-StreamsNotSupported.html">errors~StreamsNotSupported</a></li><li><a href="module-errors-TooManyRequests.html">errors~TooManyRequests</a></li><li><a href="module-errors-Unauthorized.html">errors~Unauthorized</a></li><li><a href="module-errors-UnavailableError.html">errors~UnavailableError</a></li><li><a href="module-stream-Subscription.html">stream~Subscription</a></li><li><a href="module-values-Bytes.html">values~Bytes</a></li><li><a href="module-values-FaunaDate.html">values~FaunaDate</a></li><li><a href="module-values-FaunaTime.html">values~FaunaTime</a></li><li><a href="module-values-Query.html">values~Query</a></li><li><a href="module-values-Ref.html">values~Ref</a></li><li><a href="module-values-SetRef.html">values~SetRef</a></li><li><a href="module-values-Value.html">values~Value</a></li><li><a href="PageHelper.html">PageHelper</a></li><li><a href="RequestResult.html">RequestResult</a></li>
 				</ul>
 			</li>
 			
@@ -54,7 +54,7 @@
 			<li class="dropdown">
 				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="global.html#parseJSONStreaming">parseJSONStreaming</a></li>
+					<li><a href="global.html#encode">encode</a></li><li><a href="global.html#mergeObjects">mergeObjects</a></li><li><a href="global.html#querystringify">querystringify</a></li>
 				</ul>
 			</li>
 			
@@ -312,6 +312,9 @@ Provided to an observer function optionally defined in the <a href="Client.html"
             
                 
 <span class="param-type">object</span>
+|
+
+<span class="param-type">FaunaHttpErrorResponseContent</span>
 
 
 
@@ -921,7 +924,7 @@ Provided to an observer function optionally defined in the <a href="Client.html"
             
 <hr>
 <dt class="name" id="responseContent">
-    <h4 id="responseContent"><span class="type-signature"></span>responseContent<span class="type-signature"> :object</span></h4>
+    <h4 id="responseContent"><span class="type-signature"></span>responseContent<span class="type-signature"> :object|FaunaHttpErrorResponseContent</span></h4>
 
     
 </dt>
@@ -929,7 +932,7 @@ Provided to an observer function optionally defined in the <a href="Client.html"
     
     <div class="description">
         <p>Parsed value returned by the server.
-Includes &quot;resource&quot; wrapper dict, or may be an &quot;errors&quot; dict instead.</p>
+Includes &quot;resource&quot; wrapper dict, or may be an FaunaHttpErrorResponseContent instead</p>
     </div>
     
 
@@ -939,6 +942,9 @@ Includes &quot;resource&quot; wrapper dict, or may be an &quot;errors&quot; dict
             <li>
                 
 <span class="param-type">object</span>
+|
+
+<span class="param-type">FaunaHttpErrorResponseContent</span>
 
 
 
@@ -1309,7 +1315,7 @@ Includes &quot;resource&quot; wrapper dict, or may be an &quot;errors&quot; dict
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
 	
-		on 2020-11-18T19:32:50+00:00
+		on 2021-04-27T16:26:10+00:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
