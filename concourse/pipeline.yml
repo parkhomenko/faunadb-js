@@ -16,7 +16,7 @@ resources:
       private_key: ((fauna/repo.key))
 
 jobs:
-  - name: integration
+  - name: release
     serial: true
     public: false
     plan:
